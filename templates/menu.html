@@ -1,5 +1,5 @@
 <ul>
-    {foreach from=$menu_pages key=key item=item}
-    <li><a href="/?page={$item.page}">$item.page_alias</a></li>
+    {foreach $menu_pages as $item}
+    <li><a href="/?page={$item.page}">{$item.page_alias}</a></li>
     {/foreach}
 </ul>

@@ -13,10 +13,15 @@ class Index extends Controller
    */
   protected function actionIndex()
   {
-    /*echo 'Hello, i\'m index page!';*/
-    $menu_pages = Menu::getMenuPages();
-    $this->templater->assign('menu', $menu_pages);
+    /*$menu_pages = Menu::getMenuPages();*/
+    /*$this->templater->assign('menu_pages', $menu_pages);*/
+    $this->templater->assign('menu_pages', array(
+      array('page'=>'index', 'page_alias'=>'Главная'),
+      array('page'=>'catalogue', 'page_alias'=>'Каталог'),
+      array('page'=>'contacts', 'page_alias'=>'Контакты')
+    ));
     $this->layoutVars['title'] = 'Главная';
+    $this->layoutVars['content'] = 'У нас Вы можете приобрести лучшие модели гитар ведущих мировых производителей, а так же любые аксессуары к ним по самым выгодным ценам.';
     $this->view = 'index';
   }
 }
