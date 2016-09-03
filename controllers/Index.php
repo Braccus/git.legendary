@@ -14,6 +14,9 @@ class Index extends Controller
   protected function actionIndex()
   {
     /*echo 'Hello, i\'m index page!';*/
-
+    $menu_pages = Menu::getMenuPages();
+    $this->templater->assign('menu_pages', $menu_pages);
+    $this->layoutVars['title'] = 'Главная';
+    $this->view = 'index';
   }
 }
