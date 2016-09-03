@@ -1,6 +1,0 @@
-<h1>Гостевая книга</h1>
-{foreach from=$entries item=entry}
-<b>{$entry->getUser()->getName()}</b>, {$entry->getUser()->getEmail()} {$entry->getCreatedAt()}<br>
-{htmlspecialchars($entry->getMessage())}
-<hr>
-{/foreach}
