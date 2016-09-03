@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head lang="ru">
+<head lang="en">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>{$title}</title>
-  </head>
-  <body>
-    <div>
-      {$content}
+</head>
+<body>
+<header>
+    <div class="account">
+        {$account}
     </div>
-  </body>
+    <div class="logo">
+        <img src="i/logo1.png" title="Legendary Guitars" alt="Legendary Guitars">
+    </div>
+    <div class="topmenu">
+        {$menu}
+        <form>
+            <input class="" type="search" size=40 placeholder="Например, American Deluxe Stratocaster...">
+            <input class="" type="submit" value="Поиск">
+        </form>
+    </div>
+</header>
+    {$content}
+<footer class="empty">
+    <p>Copyright &copy; 2016 Legendary Guitars. Все права защищены.</p>
+</footer>
+</body>
 </html>

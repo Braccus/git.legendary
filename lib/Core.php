@@ -44,8 +44,7 @@ class Core
     $this->FILES = $_FILES;
     $this->COOKIE = $_COOKIE;
     $this->CONFIG = $config;
-    Db::getInstance()
-      ->Connect(
+    Db::getInstance()->Connect(
         $config['db']['user'],
         $config['db']['pass'],
         $config['db']['base'],
