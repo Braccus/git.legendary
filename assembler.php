@@ -7,7 +7,7 @@ $config = [
     'port' => '3306',
     'user' => 'root',
     'pass' => '',
-    'base' => 'geekbrains'
+    'base' => 'legendary'
   ],
   'path' => [
     'root' => __DIR__,

@@ -13,6 +13,7 @@ class Index extends Controller
    */
   protected function actionIndex()
   {
-    echo 'Hello, i\'m index page!';
+    /*echo 'Hello, i\'m index page!';*/
+
   }
 }
