@@ -15,7 +15,7 @@ class Index extends Controller
   {
     /*echo 'Hello, i\'m index page!';*/
     $menu_pages = Menu::getMenuPages();
-    $this->templater->assign('menu_pages', $menu_pages);
+    $this->templater->assign('menu', $menu_pages);
     $this->layoutVars['title'] = 'Главная';
     $this->view = 'index';
   }

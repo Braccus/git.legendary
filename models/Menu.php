@@ -26,4 +26,22 @@ class Menu extends Model
 
   }
 
+  /**
+   * Геттер page.
+   * @return string
+   */
+  public function getMenuPage()
+  {
+    return $this->data['page'];
+  }
+
+  /**
+   * Геттер pageAlias.
+   * @return string
+   */
+  public function getMenuPageAlias()
+  {
+    return $this->data['page_alias'];
+  }
 }
+
