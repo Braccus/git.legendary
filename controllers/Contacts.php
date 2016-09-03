@@ -3,4 +3,7 @@
 /**
  * Class Contacts
  */
-class Contacts extends Controller{}
+class Contacts extends Controller
+{
+
+}

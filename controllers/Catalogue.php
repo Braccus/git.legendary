@@ -3,4 +3,7 @@
 /**
  * Class Catalogue
  */
-class Catalogue extends Controller{}
+class Catalogue extends Controller
+{
+
+}

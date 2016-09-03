@@ -3,4 +3,7 @@
 /**
  * Class Account
  */
-class Account extends Model{}
+class Account extends Model
+{
+
+}

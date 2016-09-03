@@ -3,4 +3,7 @@
 /**
  * Class Product
  */
-class Product extends Model{}
+class Product extends Model
+{
+
+}

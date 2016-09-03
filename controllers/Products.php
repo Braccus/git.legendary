@@ -3,4 +3,7 @@
 /**
  * Class Products
  */
-class Products extends Controller{}
+class Products extends Controller
+{
+
+}
