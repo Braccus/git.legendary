@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Авг 31 2016 г., 00:18
+-- Время создания: Сен 05 2016 г., 02:32
 -- Версия сервера: 5.5.50
 -- Версия PHP: 5.6.23
 
@@ -19,6 +19,63 @@ SET time_zone = "+00:00";
 --
 -- База данных: `legendary`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `acc_pages`
+--
+
+CREATE TABLE IF NOT EXISTS `acc_pages` (
+  `page` varchar(20) NOT NULL,
+  `page_alias` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `acc_pages`
+--
+
+INSERT INTO `acc_pages` (`page`, `page_alias`) VALUES
+('sign_up', 'Регистрация'),
+('sign_in', 'Личный кабинет');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `main`
+--
+
+CREATE TABLE IF NOT EXISTS `main` (
+  `logo` varchar(60) NOT NULL,
+  `footer` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `main`
+--
+
+INSERT INTO `main` (`logo`, `footer`) VALUES
+('i/logo1.png', 'Copyright &copy; 2016 Legendary Guitars. Все права защищены.');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `menu_pages`
+--
+
+CREATE TABLE IF NOT EXISTS `menu_pages` (
+  `page` varchar(20) NOT NULL,
+  `page_alias` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `menu_pages`
+--
+
+INSERT INTO `menu_pages` (`page`, `page_alias`) VALUES
+('index', 'Главная'),
+('catalogue', 'Каталог'),
+('contacts', 'Контакты');
 
 -- --------------------------------------------------------
 
