@@ -31,14 +31,13 @@ abstract class Controller
   {
     // Создаем отдельный темплейтер для лейаута.
     $layoutTemplater = new Smarty();
-    // Если была установлена вью, то рендерим ее и сохраняем в массив с ключом content для того,
-    // чтобы эта вью встала на место контента в лейауте.
+    // Если была установлена вью, то рендерим ее и сохраняем в массив с ключами content, menu и account для того,
+    // чтобы эта вью заполнила нужные места в лейауте.
     $this->layoutVars['content'] = $this->view
       ? $this->templater->fetch(Core::getInstance()->CONFIG['path']['templates'] . '/' . $this->view . '.html')
       : '';
-    $this->layoutVars['menu'] = $this->view
-      ? $this->templater->fetch(Core::getInstance()->CONFIG['path']['templates'] . '/' . $this->view . '.html')
-      : '';
+    $this->layoutVars['menu'] = $this->templater->fetch(Core::getInstance()->CONFIG['path']['templates'] . '/' . 'menu.html');
+    $this->layoutVars['account'] = $this->templater->fetch(Core::getInstance()->CONFIG['path']['templates'] . '/' . 'account.html');
     // Присваиваем ключи и значения, которые надо будет поменять в лейауте.
     $layoutTemplater->assign($this->layoutVars);
     // Выводим лейаут с вью пользователю.

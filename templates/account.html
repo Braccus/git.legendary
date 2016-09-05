@@ -1,5 +1,5 @@
 <div class="account">
-    {foreach from=$acc_pages item=page}
-    <a href="/?page=$page">$page->getAlias</a>
+    {foreach $acc_pages as $item}
+    <a href="/?page={$item->getAccPage()}">{$item->getAccPageAlias()}</a>
     {/foreach}
 </div>
