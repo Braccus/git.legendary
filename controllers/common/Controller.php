@@ -36,6 +36,9 @@ abstract class Controller
     $this->layoutVars['content'] = $this->view
       ? $this->templater->fetch(Core::getInstance()->CONFIG['path']['templates'] . '/' . $this->view . '.html')
       : '';
+    $this->layoutVars['menu'] = $this->view
+      ? $this->templater->fetch(Core::getInstance()->CONFIG['path']['templates'] . '/' . $this->view . '.html')
+      : '';
     // Присваиваем ключи и значения, которые надо будет поменять в лейауте.
     $layoutTemplater->assign($this->layoutVars);
     // Выводим лейаут с вью пользователю.
