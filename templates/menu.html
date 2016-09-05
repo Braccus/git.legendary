@@ -1,5 +1,5 @@
 <ul>
     {foreach $menu_pages as $item}
-    <li><a href="/?page={$item.page}">{$item.page_alias}</a></li>
+    <li><a href="/?page={$item->getMenuPage()}">{$item->getMenuPageAlias()}</a></li>
     {/foreach}
 </ul>
