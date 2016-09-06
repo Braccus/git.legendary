@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<title>Legendary Guitars - Главная</title>
+</head>
+<body>
+	<header>
+		<div class="account">
+			<a href="#">Регистрация</a>
+			<a href="#">Личный кабинет</a>
+		</div>
+		<div class="logo">
+			<img src="images/logo1.png" title="Legendary Guitars" alt="Legendary Guitars">
+		</div>
+		<div class="topmenu">
+			<ul>
+				<li>
+					<a href="">Главная</a>
+				</li>
+				<li>
+					<a href="catalogue.html">Каталог</a>
+				</li>
+				<li>
+					<a href="contacts.html">Контакты</a>
+				</li>
+			</ul>
+			<form action="#">
+				<input class="" type="search" size=50 placeholder="Например, American Deluxe Stratocaster...">
+				<input class="" type="submit" value="Поиск">
+			</form>
+		</div>
+	</header>
+	<div class="">
+		<div class="main">
+			<h2 class="welcome">Добро пожаловать в интернет-магазин "Legendary Guitars"!</h2>
+			<p>
+				<b>У нас Вы можете приобрести лучшие модели гитар ведущих мировых производителей, а так же любые аксессуары к ним по самым выгодным ценам.</b>
+			</p>
+		</div>
+		<div class="slideshow">
+			<img class="mySlides" src="images/discounts.jpeg" style="width:90%" alt="discounts">
+			<img class="mySlides" src="images/ibanez.jpeg" style="width:90%" alt="ibanez">
+			<img class="mySlides" src="images/gibson.jpeg" style="width:90%" alt="gibson">
+		</div>
+		<script>
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";}
+					myIndex++;
+					if (myIndex > x.length) {myIndex = 1}
+						x[myIndex-1].style.display = "block";
+					setTimeout(carousel, 4000);
+				}
+			</script>
+		</div>
+		<footer class="empty">
+			<p><b>Copyright &copy; 2016 Legendary Guitars. Все права защищены.</b></p>
+		</footer>
+	</body>
+	</html>

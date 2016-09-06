@@ -1,0 +1,223 @@
+* body{
+	min-width: 1000px;
+	margin: 0;
+	background-color: #FFEFD5;
+	font-family: Verdana;
+}
+/*Блок для ссылок на личный кабинет*/
+.account{
+	text-align: right;
+	padding-right: 10px;
+	background-color: #FF4040;
+}
+/*Ссылки на личный кабинет*/
+.account a{
+	padding-left: 20px;
+}
+/*Не понимаю, почему a:hover без !important работает не на все ссылки?*/
+a:hover, ul li a:hover{
+	color: black!important;
+}
+a, a:visited{
+	color: white;
+	font-size: 14px;
+}
+/*Логотип*/
+.logo{
+	width: 100px;
+}
+.logo img{
+	margin-left: 10px;
+}
+/*Блок навигации*/
+.topmenu{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #FF4040;
+}
+/*Форма блока навигации*/
+.topmenu form{
+	margin-right: 10px;
+}
+.topmenu ul{
+	padding: 0;
+	text-transform: uppercase;
+}
+.topmenu ul li{
+	display: inline-flex;
+	margin-left: 65px;
+	padding-right: 100px;
+	list-style-type: none;
+}
+ul li a, ul li a:visited{
+	text-decoration: none;
+	font-size: 18px;
+}
+h2{
+	color: black;
+	font-size: 24px;
+	font-weight: 400;
+}
+/*Блок для каталога товаров*/
+.goods{
+	display: flex;
+	justify-content: space-between;
+}
+/*Блок для одного товара*/
+.merch{
+	width: 200px;
+	height: 200px;
+	margin: 10px;
+	padding: 10px;
+	/*	border: 1px solid black;*/
+	border-radius: 5px;
+	background-color: #BF3030;
+	float: left;
+}
+/*Каталог - картинка товара*/
+.item-pic img{
+	width: 200px;
+	height: 77px;
+	background-color: white;
+	/*	border: 1px solid black;*/
+	border-radius: 5px;
+}
+/*Каталог - наименование товара*/
+.item-name p{
+	text-align: center;
+}
+/*Каталог - кнопка "Заказать"*/
+.btn{
+	width: 100px;
+	height: 30px;
+	margin: 0 auto;
+	padding-top: 10px;
+	border-radius: 5px;
+	text-align: center;
+	background-color: tomato;
+}
+/*Надпись на кнопке "Заказать"*/
+.btn p{
+	margin: 0;
+	line-height: 1em;
+}
+/*Ссылка "Заказать"*/
+.btn a{
+	text-decoration: none;
+}
+/*Страница товара - описание товара*/
+.description{
+	color: #707070;
+	font-size: 16px;
+	font-style: italic;
+	line-height: 16px;
+}
+/*Страница товара - характеристики товара*/
+.specs{
+	color: grey;
+	font-size: 18px;
+	font-weight: 400;
+	font-style: italic;
+	line-height: 20px;
+	list-style-image: url(../images/marker.png);
+}
+/*Страница товара - подробное описание товара*/
+.det_specs{
+	color: #484343;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: left;
+}
+.parent{
+	display: flex;
+	justify-content: space-between;
+}
+.contacts{
+	margin: 0 auto;
+}
+/*Страница контактов - форма для связи*/
+.feedback input[type="text"], input[type="email"]{
+	width: 480px;
+	color: black;
+	font-size: 14px;
+	font-style: italic;
+	font-weight: bold;
+	line-height: 24px;
+	border: 1px solid gray;
+	padding-left: 5px;
+}
+/*Страница контактов - текстовое поле)*/
+textarea{
+	width: 478px;
+	color: black;
+	font-family: Verdana;
+	font-size: 14px;
+	font-style: italic;
+	font-weight: bold;
+	line-height: 24px;
+	border: 1px solid gray;
+	padding-left: 5px;
+}
+input[type="text"]:focus, [type="email"]:focus, textarea:focus{
+	text-transform: capitalize;
+}
+/*Рамка формы для связи*/
+fieldset{
+	width: 470px;
+	background-color: #EFEFA9;
+}
+/*Главная - заголовок "Добро пожаловать"*/
+.welcome{
+	text-align: center;
+}
+/*Главная страница - приветствие*/
+.main p{
+	padding: 0 10px;
+}
+/*Страница товара - осн. содержимое*/
+.content{
+	padding: 0 10px;
+}
+/*Страница товара - фотография товара*/
+.content img{
+	background-color: #fff;
+	border-radius: 5px;
+}
+/*Таблица на странице товара*/
+table, tr, td, th{
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-align: center;
+	padding: 5px;
+}
+footer{
+	width: 100%;
+	height: 3.3em;
+	margin-top: 20px;
+	color: white;
+	background-color: #FF4040;
+	margin-bottom: 0;
+	position: absolute;
+}
+footer p{
+	padding-left: 10px;
+}
+.empty{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+/*Тень для блоков и картинок*/
+.card{
+	box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important
+}
+.mySlides {
+	display:none;
+}
+/*Оцентровка слайдшоу*/
+.slideshow{
+	display: flex;
+	justify-content: center;
+}
