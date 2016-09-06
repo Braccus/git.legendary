@@ -31,6 +31,10 @@ abstract class Controller
   {
     // Создаем отдельный темплейтер для лейаута.
     $layoutTemplater = new Smarty();
+    $menu_pages = Menu::getMenuPages();
+    $this->templater->assign('menu_pages', $menu_pages);
+    $acc_pages = Account::getAccountPages();
+    $this->templater->assign('acc_pages', $acc_pages);
     // Если была установлена вью, то рендерим ее и сохраняем в массив с ключами content, menu и account для того,
     // чтобы эта вью заполнила нужные места в лейауте.
     $this->layoutVars['content'] = $this->view
