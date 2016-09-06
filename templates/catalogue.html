@@ -1,0 +1,15 @@
+<div class="goods">
+    {foreach $products as $product}
+    <div class="merch card">
+        <div class="item-pic">
+            <img class="card" src="i/{$product->getItemAbbr()}.png" alt="{$product->getItemTitle()}">
+        </div>
+        <div class="item-name">
+            <p><a href="{$product->getItemAbbr()}.html">{$product->getItemTitle()}</a></p>
+        </div>
+        <div class="btn card">
+            <p><a href="#">Заказать</a></p>
+        </div>
+    </div>
+    {/foreach}
+</div>
