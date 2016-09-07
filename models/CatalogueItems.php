@@ -27,7 +27,7 @@ class CatalogueItems extends Model
   }
 
   /**
-   * Геттер page.
+   * Геттер abbr.
    * @return string
    */
   public function getItemAbbr()
@@ -36,7 +36,7 @@ class CatalogueItems extends Model
   }
 
   /**
-   * Геттер pageAlias.
+   * Геттер title.
    * @return string
    */
   public function getItemTitle()
