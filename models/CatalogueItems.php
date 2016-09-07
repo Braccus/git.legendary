@@ -8,7 +8,7 @@ class CatalogueItems extends Model
   /** @var array $data См. Model $data */
   protected $data = [];
   /** @var array $properties См. Model $properties */
-  protected static $properties = ['abbr', 'title'];
+  protected static $properties = ['id','abbr', 'title'];
 
   public static function getCatalogueItems()
   {
@@ -24,6 +24,15 @@ class CatalogueItems extends Model
     }
     return $return;
 
+  }
+
+  /**
+   * Геттер id.
+   * @return string
+   */
+  public function getItemId()
+  {
+    return $this->data['id'];
   }
 
   /**
