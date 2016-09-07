@@ -1,0 +1,20 @@
+<div class="parent">
+    <div class="contacts">
+        <h2>Как нас найти:</h2>
+        <p>{$contacts->getPhone()}</p>
+        <p>{$contacts->getAddress()}</p>
+        <p>{$contacts->getMap()}</p>
+    </div>
+    <div class="contacts">
+        <h2>Напишите нам</h2>
+        <form class="feedback" action="#">
+            <fieldset>
+                <p><input type="text" placeholder="Ваше имя"></p>
+                <p><input type="email" placeholder="Ваш e-mail"></p>
+                <p><input type="text" placeholder="Тема сообщения"></p>
+                <p><textarea rows="10" cols="45" name="text"></textarea></p>
+                <p><input type="submit" value="Отправить"></p>
+            </fieldset>
+        </form>
+    </div>
+</div>
