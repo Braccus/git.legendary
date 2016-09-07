@@ -5,7 +5,7 @@
             <img class="card" src="i/{$product->getItemAbbr()}.png" alt="{$product->getItemTitle()}">
         </div>
         <div class="item-name">
-            <p><a href="{$product->getItemAbbr()}.html">{$product->getItemTitle()}</a></p>
+            <p><a href="/?page=product&id={$product->getItemId()}">{$product->getItemTitle()}</a></p>
         </div>
         <div class="btn card">
             <p><a href="#">Заказать</a></p>
