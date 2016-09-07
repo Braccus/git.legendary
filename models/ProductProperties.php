@@ -27,6 +27,15 @@ class ProductProperties extends Model
   }
 
   /**
+   * Геттер id.
+   * @return string
+   */
+  public function getProductId()
+  {
+    return $this->data['id'];
+  }
+
+  /**
    * Геттер abbr.
    * @return string
    */
