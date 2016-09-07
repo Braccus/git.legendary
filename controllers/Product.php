@@ -3,7 +3,7 @@
 /**
  * Class Products
  */
-class Products extends Controller
+class Product extends Controller
 {
   /** @var array $allowedActions См. определение массива в базовом, Controller классе. */
   protected $allowedActions = ['index'];
