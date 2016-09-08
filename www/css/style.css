@@ -191,7 +191,7 @@ fieldset{
 }
 /*Страница товара - осн. содержимое*/
 .content{
-	padding: 0 10px;
+	padding: 0 10px 30px 10px;
 }
 /*Страница товара - фотография товара*/
 .content img{
@@ -235,4 +235,5 @@ footer p{
 .slideshow{
 	display: flex;
 	justify-content: center;
+	padding-bottom: 3.3em;
 }
