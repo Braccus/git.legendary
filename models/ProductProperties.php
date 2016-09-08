@@ -8,22 +8,25 @@ class ProductProperties extends Model
   /** @var array $data См. Model $data */
   protected $data = [];
   /** @var array $properties См. Model $properties */
-  protected static $properties = ['abbr', 'title', 'overview', 'specs', 'detailed_specs'];
+  protected static $properties = ['id', 'abbr', 'title', 'overview', 'specs', 'detailed_specs'];
 
-  public static function getProductProperties()
+  public static function getProductProperties($id)
   {
     //Достаем данные из таблицы products
     $data = Db::getInstance()
-      ->Select('SELECT ' . implode(',', self::$properties) . ' FROM products');
-    // Формируем массив, который будет содержать объекты класса ProductProperties с данными внутри и возвращаем этот массив.
-    $return = [];
-    foreach ($data as $index => $item) {
-      $entry = new ProductProperties();
-      $entry->data = $item;
-      $return[] = $entry;
-    }
-    return $return;
+      ->Select('SELECT ' . implode(',', self::$properties) . ' FROM products WHERE id=:id', [
+        'id' => $id
+      ]);
 
+    // Если данных нет отправляем false.
+    if (!isset($data[0])) {
+      return false;
+    }
+
+    // Если данные есть, создаем объект класса ProductProperties, кладем данные в массив $this->data и возвращаем объект.
+    $productSpecs = new ProductProperties();
+    $productSpecs->data = $data[0];
+    return $productSpecs;
   }
 
   /**
