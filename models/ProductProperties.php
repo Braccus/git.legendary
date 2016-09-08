@@ -29,6 +29,15 @@ class ProductProperties extends Model
     return $productSpecs;
   }
 
+  public static function getAllProductIds()
+  {
+    //Достаем данные из таблицы products
+    $ids = Db::getInstance()
+      ->Select('SELECT id FROM products');
+    echo '<pre>';
+    var_dump($ids);die();
+  }
+
   /**
    * Геттер id.
    * @return string
