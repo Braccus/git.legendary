@@ -9,13 +9,14 @@ class Product extends Controller
   protected $allowedActions = ['index'];
 
   /**
-   * Просто пример страницы по умолчанию доступной как главная, то есть http://site/
+   * Экшен отображения страницы выбранного продукта.
    */
   protected function actionIndex()
   {
-    $product = ProductProperties::getProductProperties();
+    $id = $_GET['id'];
+    $product = ProductProperties::getProductProperties($id);
     $this->templater->assign('product', $product);
-    $this->layoutVars['title'] = $product['title'];
+    $this->layoutVars['title'] = $product->getProductTitle();
     $this->view = 'product';
   }
 }
