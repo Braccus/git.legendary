@@ -14,7 +14,10 @@ class Product extends Controller
   protected function actionIndex()
   {
     $id = $_GET['id'];
-/*    if ($_GET['id'] = null || ){};*/
+    if (!$id){
+      echo 'Ошибка 404';
+      exit(404);
+    };
     $product = ProductProperties::getProductProperties($id);
     $this->templater->assign('product', $product);
     $this->layoutVars['title'] = $product->getProductTitle();
