@@ -20,7 +20,8 @@ class ProductProperties extends Model
 
     // Если данных нет отправляем false.
     if (!isset($data[0])) {
-      return false;
+      echo 'Ошибка 404';
+      exit(404);
     }
 
     // Если данные есть, создаем объект класса ProductProperties, кладем данные в массив $this->data и возвращаем объект.
@@ -34,8 +35,6 @@ class ProductProperties extends Model
     //Достаем данные из таблицы products
     $ids = Db::getInstance()
       ->Select('SELECT id FROM products');
-    echo '<pre>';
-    var_dump($ids);die();
   }
 
   /**
