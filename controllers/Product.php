@@ -13,7 +13,7 @@ class Product extends Controller
    */
   protected function actionIndex()
   {
-    $id = $_GET['id'];
+    $id = (int)$_GET['id'];
     if (!$id){
       echo 'Ошибка 404';
       exit(404);
