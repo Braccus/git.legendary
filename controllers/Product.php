@@ -14,6 +14,7 @@ class Product extends Controller
   protected function actionIndex()
   {
     $id = $_GET['id'];
+/*    if ($_GET['id'] = null || ){};*/
     $product = ProductProperties::getProductProperties($id);
     $this->templater->assign('product', $product);
     $this->layoutVars['title'] = $product->getProductTitle();
