@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Сен 06 2016 г., 20:04
+-- Время создания: Сен 08 2016 г., 22:15
 -- Версия сервера: 5.5.50
 -- Версия PHP: 5.6.23
 
@@ -38,6 +38,25 @@ CREATE TABLE IF NOT EXISTS `acc_pages` (
 INSERT INTO `acc_pages` (`page`, `page_alias`) VALUES
 ('sign_up', 'Регистрация'),
 ('sign_in', 'Личный кабинет');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `contacts`
+--
+
+CREATE TABLE IF NOT EXISTS `contacts` (
+  `phone` text NOT NULL,
+  `address` text NOT NULL,
+  `map` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `contacts`
+--
+
+INSERT INTO `contacts` (`phone`, `address`, `map`) VALUES
+('Наш номер телефона: +7 (812) 123-45-67', 'Наш адрес: СПб, Зеленогорск, ул. Гражданская, д.1', '<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=SKbUljCQl5NiPzINExKUvnsuwSPFU9jT&width=500&height=400&lang=ru_RU&sourceType=constructor&scroll=true"></script>');
 
 -- --------------------------------------------------------
 
