@@ -143,6 +143,7 @@ h2{
 .parent{
 	display: flex;
 	justify-content: space-between;
+	padding-bottom: 5em;
 }
 .contacts{
 	margin: 0 auto;
@@ -235,5 +236,5 @@ footer p{
 .slideshow{
 	display: flex;
 	justify-content: center;
-	padding-bottom: 3.3em;
+	padding-bottom: 5em;
 }
