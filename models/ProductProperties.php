@@ -18,7 +18,7 @@ class ProductProperties extends Model
         'id' => $id
       ]);
 
-    // Если данных нет отправляем false.
+    // Если данных нет выводим ошибку.
     if (!isset($data[0])) {
       echo 'Ошибка 404';
       exit(404);

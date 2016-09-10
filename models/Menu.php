@@ -15,6 +15,7 @@ class Menu extends Model
     //Достаем данные из таблицы menu_pages
     $data = Db::getInstance()
       ->Select('SELECT ' . implode(',', self::$properties) . ' FROM menu_pages');
+
     // Формируем массив, который будет содержать объекты класса Menu с данными внутри и возвращаем этот массив.
     $return = [];
     foreach ($data as $index => $item) {
@@ -23,7 +24,6 @@ class Menu extends Model
       $return[] = $entry;
     }
     return $return;
-
   }
 
   /**

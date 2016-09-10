@@ -15,11 +15,11 @@ class ContactsItems extends Model
     //Достаем данные из таблицы contacts
     $data = Db::getInstance()
       ->Select('SELECT ' . implode(',', self::$properties) . ' FROM contacts');
+
     // Формируем массив, который будет содержать объекты класса ContactsItems с данными внутри и возвращаем этот массив.
     $contacts = new ContactsItems();
     $contacts->data = $data[0];
     return $contacts;
-
   }
 
   /**

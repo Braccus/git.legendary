@@ -15,6 +15,7 @@ class CatalogueItems extends Model
     //Достаем данные из таблицы products
     $data = Db::getInstance()
       ->Select('SELECT ' . implode(',', self::$properties) . ' FROM products');
+
     // Формируем массив, который будет содержать объекты класса CatalogueItems с данными внутри и возвращаем этот массив.
     $return = [];
     foreach ($data as $index => $item) {
@@ -23,7 +24,6 @@ class CatalogueItems extends Model
       $return[] = $entry;
     }
     return $return;
-
   }
 
   /**

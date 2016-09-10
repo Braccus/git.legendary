@@ -15,6 +15,7 @@ class Account extends Model
     //Достаем данные из таблицы acc_pages
     $data = Db::getInstance()
       ->Select('SELECT ' . implode(',', self::$properties) . ' FROM acc_pages');
+
     // Формируем массив, который будет содержать объекты класса Account с данными внутри и возвращаем этот массив.
     $return = [];
     foreach ($data as $index => $item) {
