@@ -10,21 +10,19 @@ class Search extends Model
   /** @var array $properties См. Model $properties */
   protected static $properties = ['title'];
 
-  public static function verifyTitle($title)
+  public static function verifySearchQuery($query)
   {
     //Достаем данные из таблицы products
     $data = Db::getInstance()
-      ->Select('SELECT ' . implode(',', self::$properties) . ' FROM products');
+      ->Select('SELECT ' . implode(',', self::$properties) . ' FROM products WHERE title LIKE ":%query%"', [
+        'query' => $query
+      ]);
 
     // Если данных нет выводим ошибку.
-    if (!isset($data[0])) {
-      echo 'Ошибка 404';
-      exit(404);
+    if (!isset($data[0]) || !$data) {
+      return false;
     }
 
-    // Если данные есть, создаем объект класса ProductProperties, кладем данные в массив $this->data и возвращаем объект.
-    $productSpecs = new ProductProperties();
-    $productSpecs->data = $data[0];
-    return $productSpecs;
+    return true;
   }
 }

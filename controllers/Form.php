@@ -13,6 +13,8 @@ class Form extends Controller
    */
   protected function actionGet()
   {
-
+    $query = $_GET;
+    $result = Search::verifySearchQuery($query);
+    return $result;
   }
 }
