@@ -15,8 +15,9 @@ class Product extends Controller
   {
     $id = (int)$_GET['id'];
     if (!$id){
-      echo 'Ошибка 404';
-      exit(404);
+      /*echo 'Ошибка 404';
+      exit(404);*/
+      $_REQUEST['page'] = '404';
     };
     $product = ProductProperties::getProductProperties($id);
     $this->templater->assign('product', $product);
