@@ -64,9 +64,8 @@ class Core
     $controllerFile = $this->CONFIG['path']['controllers'] . '/' . $controllerName . '.php';
     // Если не существует такого контроллера, тогда выводим ошибку.
     if (!is_file($controllerFile)) {
-      /*echo 'Ошибка 404';
-      exit(404);*/
-      $this->REQUEST['page'] = 'Error404';
+      echo 'Ошибка 404';
+      exit(404);
     }
 
     /** @var Controller $controller Создаем объект контроллера. */
